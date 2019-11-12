@@ -1,0 +1,12 @@
+
+The files challenge1_package.sh and rpmscript2.sh creates all the files, folders and C code needed to
+build it the bellow RPM packages  
+#######################################33
+
+challenge1_package-1.1-0.x86_64.rpm
+challenge1_package-debuginfo-1.1-0.x86_64.rpm
+
+
+To build the RPMs please run the following
+./challange1_package.sh
+./rpmscript2.sh
