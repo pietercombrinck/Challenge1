@@ -8,5 +8,5 @@ challenge1_package-debuginfo-1.1-0.x86_64.rpm
 
 
 To build the RPMs please run the following
-./challange1_package.sh
+./challenge1_package.sh
 ./rpmscript2.sh
