@@ -51,10 +51,13 @@ cp $BINARY_FILE "%{buildroot}/opt/${PKG_NAME}/"
 %if "%{clean}" != ""
   rm -rf %{_topdir}/BUILD/%{name}
   [ $(basename %{buildroot}) == "%{name}-%{version}-%{release}.%{_target_cpu}" ] && rm -rf %{buildroot}
+ rm -f /etc/challenge
 %endif
 
 %post
 chmod 755 -R /opt/${PKG_NAME}
+echo "Date & Time: $(date '+%F %T')" > /etc/challenge
+echo "Hostname: $(hostname)" >> /etc/challenge
 __EOF__
 
 rpmbuild -v -bb --define "_topdir ${RPM_ROOT_DIR}" SPECS/${PKG_NAME}.spec
