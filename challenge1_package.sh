@@ -11,8 +11,8 @@ int main(){
   printf("Checking Date and time and hostname.\n");
   char hostname[HOST_NAME_MAX + 1];
   gethostname(hostname, HOST_NAME_MAX + 1);
-
   printf("hostname: %sn", hostname);  
+
   return 0;
 }
 __EOF__
